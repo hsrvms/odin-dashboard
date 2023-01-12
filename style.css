@@ -27,6 +27,7 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 5fr;
+  grid-template-rows: repeat(6, 1fr);
 
 }
 
@@ -86,12 +87,89 @@ a {
 /* TOPBAR START */
 .topbar {
   background-color: var(--white-bg);
+  padding: 1rem 3rem 1rem 2rem;
+  row-gap: 1rem;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
+
+.topbar-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topbar-search input {
+  width: 90%;
+  height: 2rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--gray-bg);
+  margin-left: 1rem;
+  text-indent: 1rem;
+}
+
+.topbar-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.topbar-profile .user-icon {
+  width: 2.5rem;
+}
+
+.topbar-welcome {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.topbar-welcome .user-icon {
+  width: 3.5rem;
+}
+
+.topbar-welcome span {
+  font-size: 0.8rem;
+}
+
+.topbar-welcome h2 {
+  line-height: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.buttons button {
+  background-color: var(--blue-bg);
+  font-size: 1rem;
+  color: var(--white-text);
+
+  border: none;
+  border-radius: 20px;
+  padding: .5rem 2rem;
+  
+  cursor: pointer;
+}
+
+
 /* TOPBAR END */
 
 /* CONTENT START */
 .content {
   grid-row: 2 / 7;
   background-color: var(--gray-bg);
+
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 1fr 1fr;
 }
 /* CONTENT END */
